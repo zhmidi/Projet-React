@@ -1,8 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
+import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import NavBar from './navBar';
 import "./App.css";
 import Movies from './Movies';
+import About from './About ';
+import Watch from './Watch'
+import Contact from './Contact';
+
 
 
 function App() {
@@ -32,8 +37,17 @@ let action = [
 ]
   return (
     <div className='App'>
+  
+      <BrowserRouter>
       <NavBar/>
-      <Movies list={action}/>
+      <Routes>
+  
+        <Route path="/" element ={<Movies list={action}/>}/>
+        <Route path ="/About" element ={<About />}/>
+        <Route path ="/Contact" element ={<Contact />}/>
+        <Route path ='/Watch' element ={<Watch/>}/>
+      </Routes>
+      </BrowserRouter>
     
     </div>
 

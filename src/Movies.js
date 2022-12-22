@@ -1,4 +1,4 @@
-
+import {Link} from 'react-router-dom'
 const Movies =(props)=>{
 
 
@@ -11,7 +11,8 @@ const Movies =(props)=>{
                 <img className="e" src={item.Image} alt="" />
                 <h3 className="c">{item.title}</h3>
                 <h3 className="b">{item.description}</h3>
-                <button className="d">Wach Now</button>
+                <Link to ="/Watch" state={item}><button className="d">Wach Now</button></Link>
+                
             </div>
             ))
         }

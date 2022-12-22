@@ -1,13 +1,17 @@
+import {Link} from 'react-router-dom'
 
-function NavBar () {
+
+const NavBar = () => {
     return ( 
         <div className="navbar">
         
-          <a>Anime-Site</a>
-          <a className="home">Home</a>
+            <a>Movies-Site</a>
          
-          
-        <div>
+    
+                <Link to="/">Home</Link>
+                <Link to="/About ">About</Link> 
+                <Link to ="/Contact"> Contact</Link> 
+     <div>
         <input placeholder="filter"/>
         <button>
             <>SINGNIN</>
